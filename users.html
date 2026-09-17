@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - Enterprise Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Enterprise Dashboard</h1>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Dashboard</a>
+            <a href="users.html" aria-current="page">Users</a>
+        </nav>
+    </header>
+
+    <aside>
+        <h2>Menu</h2>
+
+        <nav aria-label="Sidebar navigation">
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="users.html" aria-current="page">Users</a></li>
+                <li><a href="index.html#reports">Reports</a></li>
+                <li><a href="index.html#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+
+        <section>
+            <h2>User Management</h2>
+            <p>View and manage registered users.</p>
+        </section>
+
+        <section>
+            <h2>All Users</h2>
+
+            <table>
+                <caption>Registered users and their account status</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+
+<tbody id="userTableBody">
+    <tr>
+        <td>Arjun Patil</td>
+        <td>arjun@example.com</td>
+        <td>Administrator</td>
+        <td>Active</td>
+    </tr>
+
+    <tr>
+        <td>Rahul Sharma</td>
+        <td>rahul@example.com</td>
+        <td>Editor</td>
+        <td>Active</td>
+    </tr>
+
+    <tr>
+        <td>Priya Deshmukh</td>
+        <td>priya@example.com</td>
+        <td>User</td>
+        <td>Inactive</td>
+    </tr>
+</tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Add User</h2>
+
+            <form id="userForm">
+
+                <fieldset>
+                    <legend>New User Information</legend>
+
+                    <label for="userName">Full Name</label>
+                    <input
+                        type="text"
+                        id="userName"
+                        name="userName"
+                        required
+                        minlength="3"
+                    >
+
+                    <label for="userEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="userEmail"
+                        name="userEmail"
+                        required
+                    >
+
+                    <label for="userRole">User Role</label>
+                    <select id="userRole" name="userRole" required>
+                        <option value="">Select a role</option>
+                        <option value="admin">Administrator</option>
+                        <option value="editor">Editor</option>
+                        <option value="user">User</option>
+                    </select>
+
+                    <button type="submit">Add User</button>
+
+                </fieldset>
+
+            </form>
+
+            <p id="formMessage" role="status"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Enterprise Dashboard</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

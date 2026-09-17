@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Enterprise Dashboard</h1>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Dashboard</a>
+            <a href="users.html">Users</a>
+        </nav>
+    </header>
+
+    <aside>
+        <h2>Menu</h2>
+
+        <nav aria-label="Sidebar navigation">
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#users">Users</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+
+        <section id="overview">
+            <h2>Dashboard Overview</h2>
+
+            <article>
+                <h3>Total Users</h3>
+                <p>1,250</p>
+            </article>
+
+            <article>
+                <h3>Active Users</h3>
+                <p>980</p>
+            </article>
+
+            <article>
+                <h3>Reports</h3>
+                <p>45</p>
+            </article>
+        </section>
+
+        <section id="users">
+            <h2>Recent Users</h2>
+
+<table>
+    <caption>Recent user information</caption>
+
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+
+    <tbody id="recentUsersBody">
+    </tbody>
+</table>
+        </section>
+
+        <section id="reports">
+            <h2>Report Request</h2>
+
+            <form id="reportForm">
+
+                <fieldset>
+                    <legend>Request a Report</legend>
+
+                    <label for="reportName">Report Name</label>
+                    <input
+                        type="text"
+                        id="reportName"
+                        name="reportName"
+                        required
+                        minlength="3"
+                    >
+
+                    <label for="reportEmail">Email Address</label>
+                    <input
+                        type="email"
+                        id="reportEmail"
+                        name="reportEmail"
+                        required
+                    >
+
+                    <button type="submit">Request Report</button>
+
+                </fieldset>
+
+            </form>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+
+            <button type="button" id="openModal">
+                Open Settings
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Enterprise Dashboard</p>
+    </footer>
+
+    <dialog id="settingsModal" aria-labelledby="modalTitle">
+
+        <h2 id="modalTitle">Dashboard Settings</h2>
+
+        <p>Update your dashboard preferences.</p>
+
+        <button type="button" id="closeModal">
+            Close
+        </button>
+
+    </dialog>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
